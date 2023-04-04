@@ -8,6 +8,15 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<String> profileImages = [
+    "images/1.jpg",
+    "images/2.jpg",
+    "images/3.jpg",
+    "images/4.jpg",
+    "images/5.jpg",
+    "images/6.jpg",
+    "images/7.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +39,42 @@ class _HomePageState extends State<HomePage> {
             icon: const Icon(Icons.chat_bubble_outline),
           ),
         ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            // STORY
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                  children: List.generate(
+                7,
+                (index) => Container(
+                  padding: EdgeInsets.all(10.0),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 35,
+                        backgroundImage: AssetImage('images/story.jpg'),
+                        child: CircleAvatar(
+                          radius: 32,
+                          backgroundImage: AssetImage(profileImages[index]),
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      const Text(
+                        'Profile Name',
+                        style: TextStyle(fontSize: 12, color: Colors.black87),
+                      )
+                    ],
+                  ),
+                ),
+              )),
+            ),
+            const Divider(),
+            // Part 5 continouses from here...
+          ],
+        ),
       ),
     );
   }
