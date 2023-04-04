@@ -17,6 +17,16 @@ class _HomePageState extends State<HomePage> {
     "images/6.jpg",
     "images/7.jpg",
   ];
+
+  List<String> posts = [
+    "images/post_1.jpg",
+    "images/post_2.jpg",
+    "images/post_3.jpg",
+    "images/post_4.jpg",
+    "images/post_5.jpg",
+    "images/post_6.jpg",
+    "images/post_7.jpg",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,7 +109,9 @@ class _HomePageState extends State<HomePage> {
                           icon: Icon(Icons.more_vert),
                         )
                       ],
-                    )
+                    ),
+                    // IMAGE POST
+                    Image.asset(posts[index])
                   ],
                 ),
               ),
