@@ -73,6 +73,37 @@ class _HomePageState extends State<HomePage> {
             ),
             const Divider(),
             // Part 5 continouses from here...
+            Column(
+              children: List.generate(
+                7,
+                (index) => Column(
+                  children: [
+                    // HEADER POST
+                    Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          child: CircleAvatar(
+                            radius: 14,
+                            backgroundImage: AssetImage('images/story.jpg'),
+                            child: CircleAvatar(
+                              radius: 12,
+                              backgroundImage: AssetImage(profileImages[index]),
+                            ),
+                          ),
+                        ),
+                        const Text('Profile name'),
+                        const Spacer(),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.more_vert),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
