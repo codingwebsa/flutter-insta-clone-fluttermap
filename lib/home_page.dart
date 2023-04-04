@@ -111,7 +111,25 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     // IMAGE POST
-                    Image.asset(posts[index])
+                    Image.asset(posts[index]),
+                    // FOOTER POST
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.favorite_border_outlined),
+                        ),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.comment_outlined),
+                        ),
+                        const Spacer(),
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.bookmark_add_outlined),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
